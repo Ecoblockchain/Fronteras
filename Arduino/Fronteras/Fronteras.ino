@@ -27,7 +27,7 @@ void loop() {
   for (short i = 0; i < 2; i++) {
     mServo[i].writeMicroseconds(SERVO_CENTER[i] + SERVO_RANGE[i] - mPoints[mPosition][i] * 2 * SERVO_RANGE[i]);
   }
-  delayMicroseconds(3000);
+  delayMicroseconds(3333);
 
   if (mPosition == 0) {
     delay(500);
