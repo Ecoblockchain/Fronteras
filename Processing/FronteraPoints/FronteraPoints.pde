@@ -18,8 +18,7 @@ void setup() {
       }
     }
     if (maxY > 0) {
-      float maxDim = max(mImage.width, mImage.height);
-      mPoints.add(new PVector(float(x)/maxDim, maxY/maxDim));
+      mPoints.add(new PVector(float(x)/mImage.width, maxY/mImage.height));
     }
   }
 
@@ -28,10 +27,9 @@ void setup() {
   mGraphic.background(0);
   mGraphic.stroke(200, 0, 0);
   mGraphic.strokeWeight(2);
-  float maxDim = max(mGraphic.width, mGraphic.height);
   for (int i=1; i<mPoints.size(); i++) {
-    mGraphic.line(mPoints.get(i-1).x*maxDim, mPoints.get(i-1).y*maxDim, 
-      mPoints.get(i).x*maxDim, mPoints.get(i).y*maxDim);
+    mGraphic.line(mPoints.get(i-1).x*mGraphic.width, mPoints.get(i-1).y*mGraphic.height,
+      mPoints.get(i).x*mGraphic.width, mPoints.get(i).y*mGraphic.height);
   }
   mGraphic.endDraw();
 
