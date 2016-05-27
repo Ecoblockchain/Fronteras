@@ -1,5 +1,5 @@
 #include <Servo.h>
-#include "Points.h"
+#include "USMXpoints.h"
 
 // Range [600,2200] ~180 deg ==> 9ms ~ 1 degree
 Servo mServo[2];
