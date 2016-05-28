@@ -23,7 +23,12 @@ void setup() {
 }
 
 void loop() {
-  back();
+  if ((millis() / 5000) % 4 != 3) {
+    back();
+  }
+  else {
+    analogWrite(LASER_PIN, 0);
+  }
 }
 
 void back() {
