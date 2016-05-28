@@ -26,8 +26,10 @@ void setup() {
   mGraphic.beginDraw();
   mGraphic.background(0);
   mGraphic.stroke(200, 0, 0);
+  mGraphic.fill(200, 0, 0);
   mGraphic.strokeWeight(2);
   for (int i=1; i<mPoints.size(); i++) {
+    mGraphic.ellipse(mPoints.get(i-1).x*mGraphic.width, mPoints.get(i-1).y*mGraphic.height, 10, 10);
     mGraphic.line(mPoints.get(i-1).x*mGraphic.width, mPoints.get(i-1).y*mGraphic.height,
       mPoints.get(i).x*mGraphic.width, mPoints.get(i).y*mGraphic.height);
   }
